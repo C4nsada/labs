@@ -1,0 +1,9 @@
+fillamentForPrinting(n1,typeTPU,green,transparent).
+fillamentForPrinting(n2,typePLA,white,nontransparent).
+fillamentForPrinting(n3,typeABS,black,nontransparent).
+fillamentForPrinting(n4,typePETG,red,nontransparent).
+fillamentForPrinting(n5,typePLA,green,nontransparent).
+
+transparency(X):-fillamentForPrinting(X,_,_,transparent).
+typeOfPlastic(X,Y):-fillamentForPrinting(X,Y,_,_).
+color(X,Y):-fillamentForPrinting(X,_,Y,_).

@@ -1,0 +1,8 @@
+student(max,male,troechnik).
+student(misha,male,khoroshist).
+student(alina,female,troechnik).
+student(alisa,female,otlichnik).
+
+molodec(X):-student(X,_,otlichnik);student(X,_,khoroshist).
+
+otvet(X):-molodec(X),student(X,male,_).
